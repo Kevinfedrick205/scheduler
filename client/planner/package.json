@@ -1,9 +1,9 @@
 {
+  "homepage": "https://kevinfedrick205.github.io/scheduler",
   "name": "planner",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kevinfedrick205.github.io/my-app",
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
