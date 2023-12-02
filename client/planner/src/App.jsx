@@ -63,13 +63,13 @@ const Info = () => {
   const [planner, setPlanner] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/customers').then((response) => setCustomers(response.data));
-    axios.get('http://localhost:3001/api/planner').then((response) => setPlanner(response.data));
+    axios.get('https://schedulers-18f7a3a536a6.herokuapp.com/api/customers').then((response) => setCustomers(response.data));
+    axios.get('https://schedulers-18f7a3a536a6.herokuapp.com/api/planner').then((response) => setPlanner(response.data));
   }, []);
 
   const handleDrop = (customerId, slot) => {
-    axios.put(`http://localhost:3001/api/planner/${planner[0].date}/${slot}`, { customerId }).then((response) => {
-      axios.get('http://localhost:3001/api/planner').then((response) => setPlanner(response.data));
+    axios.put(`https://schedulers-18f7a3a536a6.herokuapp.com/api/planner/${planner[0].date}/${slot}`, { customerId }).then((response) => {
+      axios.get('https://schedulers-18f7a3a536a6.herokuapp.com/api/planner').then((response) => setPlanner(response.data));
     });
   };
 
